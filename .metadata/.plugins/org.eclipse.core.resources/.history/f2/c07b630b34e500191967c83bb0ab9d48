@@ -1,0 +1,48 @@
+/*
+ * led.c
+ *
+ *  Created on: Oct 2, 2019
+ *      Author: spb278
+ */
+#include "tm4c123gh6pm.h"
+
+void init_gpio (void)
+{
+    volatile unsigned long delay_clk;  // delay for clock, must have 3 sys clock delay, p.424
+    SYSCTL_RCGC2 |= 0x20;              // find value for clock gating enable for port F, p.424
+    delay_clk = SYSCTL_RCGC2;          // just a delay for the clock to settle, no-operation
+    GPIO_PORTF_DIR |= 0xE;             //On reset all set to zero 0 is in 1 is out
+    GPIO_PORTF_AFSEL &= ~0xE;          //on reset no default set to zero
+    GPIO_PORTF_DEN |= 0xE;             //on reset no default set to 1 for digital enable
+    GPIO_PORTF_PCTL &= ~0xE;           //on reset no default set to zero
+}
+
+
+void red_on(void){
+    GPIO_PORTF_DATA |= 0x02;
+}
+
+void red_off(void){
+    GPIO_PORTF_DATA &= ~0x02;
+}
+
+void blue_on(void){
+    GPIO_PORTF_DATA |= 0x04;
+}
+
+void blue_off(void){
+    GPIO_PORTF_DATA &= ~0x04;
+}
+
+void green_on(void){
+    GPIO_PORTF_DATA |= 0x08;
+}
+
+void green_off(void){
+    GPIO_PORTF_DATA &= ~0x08;
+}
+
+void delay (void) {
+    long unsigned i;
+    for (i = 0; i < 1000000; i++);
+}

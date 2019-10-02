@@ -1,0 +1,25 @@
+/*
+ * led.h
+ *
+ *  Created on: Oct 2, 2019
+ *      Author: spb278
+ */
+
+#ifndef LED_H_
+#define LED_H_
+
+void red_on(void);
+
+void red_off(void);
+
+void blue_on(void);
+
+void blue_off(void);
+
+void green_on(void);
+
+void green_off(void);
+
+void delay (void);
+
+#endif /* LED_H_ */

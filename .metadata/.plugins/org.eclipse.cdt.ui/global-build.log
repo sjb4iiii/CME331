@@ -1,0 +1,29 @@
+
+**** Build of configuration Debug for project L2 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 4 all -O 
+Building file: ../led/led.c
+Invoking: ARM Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/spb278/engr-ece/Documents/CME331/L2" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="led/led.d" --obj_directory="led"  "../led/led.c"
+Finished building: ../led/led.c
+ 
+Building file: ../main.c
+Invoking: ARM Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="/home/spb278/engr-ece/Documents/CME331/L2" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+Finished building: ../main.c
+ 
+Building target: L2.out
+Invoking: ARM Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"L2.map" --heap_size=0 --stack_size=512 -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="L2_linkInfo.xml" --rom_model -o "L2.out" "./Systick_16.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./led/led.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: L2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project L2 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 4 all -O 
+gmake[1]: 'L2.out' is up to date.
+
+**** Build Finished ****

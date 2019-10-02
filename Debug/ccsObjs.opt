@@ -1,0 +1,1 @@
+"./Systick_16.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./led/led.obj" "../tm4c123gh6pm.cmd" -llibc.a 
